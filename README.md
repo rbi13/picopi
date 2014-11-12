@@ -9,6 +9,8 @@ cd ../tts
 make
 
 Play over audio-jack when HDMI plugged in: 
+
+(0=auto, 1=analog, 2=hdmi)
 amixer -c 0 cset numid=3 1
 
 Pico TTS for Raspberry Pi
