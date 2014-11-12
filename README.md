@@ -1,4 +1,5 @@
 INSTALL
+
 sudo apt-get install libexpat1-dev
 
 cd pico/lib
@@ -6,6 +7,9 @@ make && sudo make install
 
 cd ../tts
 make
+
+Play over audio-jack when HDMI plugged in: 
+amixer -c 0 cset numid=3 1
 
 Pico TTS for Raspberry Pi
 
