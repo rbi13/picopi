@@ -2,18 +2,15 @@ INSTALL
 
 sudo apt-get install libexpat1-dev
 
-cd pico/lib
-make && sudo make install
+cd pico/lib && make && sudo make install
 
-cd ../tts
-make
+cd ../tts && make
 
 Play over audio-jack when HDMI plugged in: 
 
-(0=auto, 1=analog, 2=hdmi)
+amixer -c 0 cset numid=3 1 #(0=auto, 1=analog, 2=hdmi)
 
-amixer -c 0 cset numid=3 1
-
+#-----------------------------------------------------------+
 Pico TTS for Raspberry Pi
 
 This is a port of the offline text-to-speech engine from Google's Android operating system to the Raspberry Pi. Pico TTS is specifically designed for embedded devices making it ideal for memory and processing constrained platforms like the Raspberry Pi. The original code was licensed under the Apache 2 license and this derivative keeps that license.
